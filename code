@@ -1,71 +1,79 @@
-import tkinter as tk  #import tkinter as tk to future
-   
-root= tk.Tk()   # root is wondow
-   
-canvas1 = tk.Canvas(root, width = 400, height = 300,  relief = 'raised') #standart of window   
-canvas1.pack()  # widget in block 
-   
-label1 = tk.Label(root, text='Contact book')   # name of label
-label1.config(font=('helvetica', 14))    # font
-canvas1.create_window(200, 25, window=label1)   # x, y standarts
-   
-label2 = tk.Label(root, text='Type your Name:')   # name of label
-label2.config(font=('helvetica', 10))   # font
-canvas1.create_window(100, 100, window=label2) # x, y standarts
-  
-label3 = tk.Label(root, text='Type your Number:')   # name of label
-label3.config(font=('helvetica', 10))   # font
-canvas1.create_window(300, 100, window=label3)   # x, y standarts
-   
-entry2 = tk.Entry (root)    # widget that has a line which can be texted be user
-canvas1.create_window(100, 140, window=entry2)   # standarts entry
-   
-entry3 = tk.Entry (root) # widget that has a line which can be texted be user   
+import tkinter as tk  # import tkinter as tk to future
+
+root = tk.Tk()  # root is wondow
+
+canvas1 = tk.Canvas(root, width=400, height=330, relief='raised')  # standart of window
+canvas1.pack()  # widget in block
+
+label1 = tk.Label(root, text='Contact phone book')  # name of label
+label1.config(font=('helvetica', 14))  # font
+canvas1.create_window(200, 25, window=label1)  # x, y standarts
+
+label2 = tk.Label(root, text='Type your Name:')  # name of label
+label2.config(font=('helvetica', 10))  # font
+canvas1.create_window(100, 100, window=label2)  # x, y standarts
+
+label3 = tk.Label(root, text='Type your Number:')  # name of label
+label3.config(font=('helvetica', 10))  # font
+canvas1.create_window(300, 100, window=label3)  # x, y standarts
+
+entry2 = tk.Entry(root)  # widget that has a line which can be texted be user
+canvas1.create_window(100, 140, window=entry2)  # standarts entry
+
+entry3 = tk.Entry(root)  # widget that has a line which can be texted be user
 canvas1.create_window(300, 140, window=entry3)  # standarts entry
-  
-label4 = tk.Label(root, text='Type your Name:')   # name of label
-label4.config(font=('helvetica', 10))   # font
+
+label4 = tk.Label(root, text='Type your Name:')  # name of label
+label4.config(font=('helvetica', 10))  # font
 canvas1.create_window(100, 200, window=label4)  # x, y standarts
-  
-label5 = tk.Label(root, text='Type your Number:') # name of label
-label5.config(font=('helvetica', 10))   # font
+
+label5 = tk.Label(root, text='Type your Number:')  # name of label
+label5.config(font=('helvetica', 10))  # font
 canvas1.create_window(300, 200, window=label5)  # x, y standarts
-  
-entry4 = tk.Entry (root)  # widget that has a line which can be texted be user  
+
+entry4 = tk.Entry(root)  # widget that has a line which can be texted be user
 canvas1.create_window(100, 240, window=entry4)  # standarts entry
-  
-entry5 = tk.Entry (root)    # widget that has a line which can be texted be user
-canvas1.create_window(300, 240, window=entry5) # standarts entry
 
-def getEntry(): # loop for comand
-    res = entry2.get() # variable = take entry 2
-    print(res) # print it
-
-btn = tk.Button(root, height=1, width=12, text="view 1st name", command=getEntry, bg='red') #button with standart 
-btn.pack() # widget in block 
+entry5 = tk.Entry(root)  # widget that has a line which can be texted be user
+canvas1.create_window(300, 240, window=entry5)  # standarts entry
 
 
-def getEntry2(): # loop for comand
+def getEntry():  # loop for comand
+    res = entry2.get()  # variable = take entry 2
+    print(res)  # print it
+
+
+btn = tk.Button(root, height=1, width=12, text="view 1st name", command=getEntry, bg='brown')  # button with standart
+canvas1.create_window(100, 280, window=btn)
+
+
+def getEntry2():  # loop for comand
     res = entry3.get()  # variable = take entry 3
-    print(res) # print it
-
-btn2 = tk.Button(root, height=1, width=15, text="view 1st number", command=getEntry2, bg='red') #button with standart  
-btn2.pack() # widget in block 
-
-def getEntry3(): # loop for comand
-    res = entry4.get() # variable = take entry 4
-    print(res) # print it
-
-btn3 = tk.Button(root, height=1, width=12, text="view 2nd name", command=getEntry3, bg='red')  #button with standart 
-btn3.pack() # widget in block 
-
-def getEntry4(): # loop for comand
-    res = entry5.get() # variable = take entry 5
-    print(res) # print it
-
-btn4 = tk.Button(root, height=1, width=12, text="view 2nd number", command=getEntry4, bg='red')  #button with standart 
-btn4.pack() # widget in block 
+    print(res)  # print it
 
 
+btn2 = tk.Button(root, height=1, width=12, text="view 1st number", command=getEntry2,
+                 bg='dark grey')  # button with standart
+canvas1.create_window(300, 280, window=btn2)
 
-root.mainloop() # run window root
+
+def getEntry3():  # loop for comand
+    res = entry4.get()  # variable = take entry 4
+    print(res)  # print it
+
+
+btn3 = tk.Button(root, height=1, width=12, text="view 2nd name", command=getEntry3, bg='brown')  # button with standart
+canvas1.create_window(100, 310, window=btn3)
+
+
+def getEntry4():  # loop for comand
+    res = entry5.get()  # variable = take entry 5
+    print(res)  # print it
+
+
+btn4 = tk.Button(root, height=1, width=12, text="view 2nd number", command=getEntry4,
+                 bg='dark grey')  # button with standart
+canvas1.create_window(300, 310, window=btn4)
+
+
+root.mainloop()  # run window root
